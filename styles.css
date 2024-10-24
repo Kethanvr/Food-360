@@ -1,0 +1,684 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", system-ui, sans-serif; /* Updated to include Poppins font */
+    background: #f0f4ff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #8a8dc5;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fffefe;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 400px;
+}
+
+nav ul {
+    /* text-decoration: none; */
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 18px;
+    color: #fefafa;
+    cursor: pointer;
+}
+
+.profile {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50px;
+}
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.typing {
+    display: inline-block; /* Keep it inline for the typing effect */
+    overflow: hidden; /* Hide the overflow to create the typing effect */
+    border-right: 4px solid black; /* Create a cursor effect */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite; /* Typing animation */
+}
+
+@keyframes typing {
+    from {
+        width: 0; /* Start with width 0 */
+    }
+    to {
+        width: 100%; /* Expand to full width */
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent; /* Hide the caret */
+    }
+    50% {
+        border-color: black; /* Show the caret */
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .search-bar input {
+        width: 100%; /* Make search bar full width */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items */
+        align-items: flex-start; /* Align to the start */
+        gap: 10px; /* Smaller gap */
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    }
+
+    main {
+        flex-direction: column; /* Stack intro and art grid */
+        padding: 20px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .intro h2 {
+        font-size: 32px; /* Smaller heading */
+    }
+
+    .intro p {
+        font-size: 16px; /* Smaller paragraph */
+    }
+
+    .art-box {
+        width: 100%; /* Full width for art boxes */
+        height: auto; /* Automatic height */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* 1 box per row */
+    }
+
+    footer {
+        flex-direction: column; /* Stack footer items */
+        align-items: center; /* Center footer items */
+        text-align: center; /* Center text within each item */
+    }
+
+    .footer-links {
+        margin-bottom: 10px; /* Add some spacing */
+    }
+}a{
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover {
+    color:inherit; 
+    text-decoration:none;
+    color: black;
+    cursor:pointer;  
+}
+#browse-button:hover{
+    color: black;
+}
+.bottom-link:hover{
+    color:inherit; 
+    text-decoration:none;
+    cursor:pointer;  
+ color: rgb(255, 255, 255);
+}
+
+.profile {
+    font-size: 14px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 50px;
+}
+/* Thumbnails and Main Image */
+.thumbnail {
+    width: 100px;
+    height: auto;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+#main-product-image:hover{
+    border-color: #FFD700; /* Gold highlight on hover */
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
+.thumbnail:hover {
+    border-color: #FFD700; /* Gold highlight on hover */
+}
+
+#main-product-image {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+/* Thumbnails and Main Image */
+.thumbnail {
+    width: 100px;
+    height: auto;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: #FFD700; /* Gold highlight on hover */
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Main Product Image */
+#main-product-image {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease; /* Smooth transition for scaling */
+}
+
+#main-product-image:hover {
+    transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+body{
+    background-image: url("https://img.freepik.com/premium-photo/white-background-with-pattern-lines_662214-45629.jpg");
+}
+.product-card {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #fcfcfc;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.suggested-products{
+    background-color: #ffffff;
+}
+.product-card{
+
+border-color: rgb(0, 0, 0); /* Sets the border color to blue */
+
+border-radius: 10px; /* Adds a 10px rounded corner to all sides */
+
+}
+.product-card {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.popup-info {
+    display: none;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+    width: 200px;
+    text-align: center;
+}
+
+.product-card:hover .popup-info {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.product-images {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.product-images img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.product-images img:hover {
+    transform: scale(1.1); /* Scale up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}
+.product-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.product-images img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product-images img:hover {
+    transform: scale(1.3); /* Zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-card:hover .popup-info {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.suggested-products {
+    padding: 40px;
+}
+
+.suggested-products h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.suggested-products .grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.suggested-products .product-card {
+    text-align: center;
+    flex: 1 1 200px;
+}
+
+.suggested-products img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-card .discount {
+    color: red;
+}
+
+.product-card .original-price {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-images img {
+        width: 60px;
+        height: 80px;
+    }
+
+    .main-image img {
+        max-width: 100%;
+    }
+
+    .product-info {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .size-options {
+        justify-content: center;
+    }
+
+    .quantity {
+        justify-content: center;
+    }
+
+    .suggested-products .grid {
+        justify-content: center;
+    }
+
+    .suggested-products img {
+        width: 120px;
+        height: 120px;
+    }
+}
+.suggested-products{
+    background-color: #fdfcfc;
+}
+h3{
+    color: #000000;
+}
+.xyz{
+    color: #000000;
+}
+.product-card {
+    text-align: center; /* Centers the text and image within the card */
+    /* Add any additional styling here */
+}
+/* General Styles */
+body {
+    font-family: "Poppins", system-ui, sans-serif;
+    background-color: #f0f4ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #D291BC;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ingredients Section */
+.ingredients-section {
+    margin-top: 20px;
+}
+
+.vegan-status {
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 12px;
+    padding: 2px 8px;
+    background-color: #e0f7e9; /* Light green for vegan */
+}
+
+.non-vegan .vegan-status {
+    background-color: #f8d7da; /* Light red for non-vegan */
+}
+
+/* Vegan Indicator Circles */
+.green-circle, .red-circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.green-circle {
+    background-color: green;
+}
+
+.red-circle {
+    background-color: red;
+}
+
+/* Preservatives Section */
+.preservatives-section {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Base styling adjustments */
+body {
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* For screens smaller than tablets */
+@media (max-width: 1024px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    /* Logo should scale down */
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .search-bar input {
+        width: 80%;
+        padding: 8px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    /* Navigation links in single column */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Grid elements in single column */
+    .container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    /* Product image and thumbnails adjust */
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+
+    #main-product-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    /* Adjust the product details for readability */
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .bg-green-700, .bg-green-600, .bg-green-500 {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust font sizes */
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, li {
+        font-size: 1rem;
+    }
+
+    /* Video thumbnail sizing */
+    .video-thumbnail img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .video-thumbnail a {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    /* Suggested products should stack vertically */
+    .suggested-products .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        width: 100px;
+        height: auto;
+    }
+
+    /* Footer styles */
+    footer {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        margin: 8px 0;
+    }
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #593c8f;
+}
+.abcd{
+    background-color:#a6aada ;
+}
+/* Container for the entire product section */
+.suggested-products {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Grid layout for product cards */
+.product-grid {
+    display: flex;
+    justify-content: space-between;  /* Ensures equal spacing between product cards */
+    gap: 20px;  /* Adds space between items */
+    flex-wrap: wrap; /* Allows wrapping if needed */
+}
+
+/* Styling for individual product cards */
+.product-card {
+    flex: 1;  /* Each card takes equal space */
+    text-align: center;  /* Centers the text */
+    background-color: #f8f8f8;  /* Background color for product card */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Image styles */
+.product-card img {
+    width: 100%;
+    max-width: 150px;  /* Adjust max width for image */
+    height: auto;  /* Keep aspect ratio */
+    margin-bottom: 10px;
+}
+
+/* Title styling */
+.product-card h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Hover effect for product cards */
+.product-card:hover {
+    transform: scale(1.05);  /* Slight zoom on hover */
+}

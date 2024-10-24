@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packed Food Directory</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="icon" class="topphoto" type="image/x-icon"
+        href="https://t4.ftcdn.net/jpg/05/65/62/93/360_F_565629355_3MAzwiVK6CtXTgzW3YSjHqMWfd8R3OtG.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body {
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        /* Custom styling for the video thumbnail box */
+        .video-thumbnail {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .video-thumbnail a {
+            margin-top: 10px;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .video-thumbnail a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body class="bg-green-100 text-white">
+    <header>
+        <div class="logo">
+            <h1 class="indie-flower-regular ">Food360</h1>
+        </div>
+        <div class="search-bar">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+            <input type="text" placeholder="&#xF002 Check high quality foods for better health"
+                style="font-family:Arial, FontAwesome" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                    <li><a href="#" onclick="alertPageComingSoon()">About us</a></li>
+                <li><a href="#" onclick="alertPageComingSoon()">Contact us</a></li>
+                <li><a href="#" onclick="alertPageComingSoon()">Work with us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+            <!-- Dont change the code tilll here 👆👆👆👆👆👆-->
+
+     <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+                         <!-- change the  links of img  below here 👇👇👇👇-->
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-8 grid grid-cols-2 gap-6">
+        <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center">
+                <!-- Thumbnails Section -->
+                <div class="flex flex-col items-center space-y-4">
+                    <img src="https://www.bigbasket.com/media/uploads/p/l/40212583_3-kissan-tomato-ketchup.jpg" alt="Thumbnail 1" class="w-20 h-20 rounded-lg cursor-pointer thumbnail" onclick="updateMainImage('https://www.bigbasket.com/media/uploads/p/l/40212583_3-kissan-tomato-ketchup.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/616sUbGXuNL.SX679.jpg" alt="Thumbnail 2" class="w-20 h-20 rounded-lg cursor-pointer thumbnail" onclick="updateMainImage('https://m.media-amazon.com/images/I/616sUbGXuNL.SX679.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/61Ex7hOEsqL.SX679.jpg" alt="Thumbnail 3" class="w-20 h-20 rounded-lg cursor-pointer thumbnail" onclick="updateMainImage('https://m.media-amazon.com/images/I/61Ex7hOEsqL.SX679.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/71jAcsdjNaL.SX679.jpg" alt="Thumbnail 4" class="w-20 h-20 rounded-lg cursor-pointer thumbnail" onclick="updateMainImage('https://m.media-amazon.com/images/I/71jAcsdjNaL.SX679.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/61Q47JqFdpL.SX679.jpg" alt="Thumbnail 5" class="w-20 h-20 rounded-lg cursor-pointer thumbnail" onclick="updateMainImage('https://m.media-amazon.com/images/I/61Q47JqFdpL.SX679.jpg')">
+                </div>
+                
+                <!-- Main Product Image -->
+                <div class="ml-10">
+                    <img id="main-product-image" src="https://www.bigbasket.com/media/uploads/p/l/40212583_3-kissan-tomato-ketchup.jpg" alt="Main Product Image" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+            
+</div>
+
+        
+        
+                                 <!-- change the  naemes of product below here 👇👇👇👇-->
+
+
+  <!-- Product Details Section -->
+<div class="grid grid-cols-2 gap-4">
+    <!-- Product Name and Price -->
+    <div class="bg-green-700 p-4 rounded-lg" style="background-color:#a6aada">
+        <h2 class="text-xl font-bold">Product Name and Price</h2>
+        <p>Kissan Fresh Tomato Ketchup 2 kg Pouch</p>
+        <h2>Price- ₹200</h2>
+    </div>
+
+    <!-- Manufacturer and Location -->
+    <div class="bg-green-700 p-4 rounded-lg" style="background-color:#a6aada">
+        <h2 class="text-xl font-bold">Manufacturer and Location</h2>
+        <p>Kissan, India</p>
+    </div>
+
+    <!-- Ingredients and Preservatives Side by Side -->
+    <div class="grid grid-cols-2 gap-4 col-span-2">
+        <!-- Ingredients List -->
+        <div class="bg-green-600 p-4 rounded-lg" style="background-color:#a6aada">
+            <h2 class="text-xl font-bold">Ingredients<span class="vegan-indicator"></span></h2>
+            <ul class="list-disc ml-5">
+                <li>Tomato Puree</li>
+                <li>Sugar</li>
+                <li>Vinegar</li>
+                <li>Salt</li>
+                <li>Spices</li>
+            </ul>
+        </div>
+
+        <!-- Preservatives List -->
+        <div class="bg-green-600 p-4 rounded-lg" style="background-color:#a6aada">
+            <h2 class="text-xl font-bold">Preservatives with Side Effects</h2>
+            <ul class="list-disc ml-5">
+                <li>E211 - Sodium Benzoate</li>
+                May cause allergic reactions in some individuals <!-- no li tag used for side effects -->
+                <li>E260 - Acetic Acid</li>
+                Generally recognized as safe when used in moderation <!-- no li tag used for side effects -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Source of Origin and How to Use Side by Side -->
+    <div class="grid grid-cols-2 gap-4 col-span-2">
+        <!-- Source of Origin Section -->
+        <div class="bg-green-500 p-4 rounded-lg" style="background-color:#a6aada">
+            <h2 class="text-xl font-bold">Vegan or Non-vegan</h2>
+            <li>Vegan</li>
+            <h2 class="text-xl font-bold">Source of Origin of Ingredients</h2>
+            <li>India (Tomatoes, Spices)</li>
+        </div>
+
+        <!-- How to Use the Product Section with Thumbnail -->
+        <div class="bg-green-600 p-4 rounded-lg video-thumbnail" style="background-color:#a6aada">
+            <h2 class="text-xl font-bold">How to Use the Product</h2>
+            <a href="https://youtu.be/2if5bK8FF1I?si=yZV8jw424ZaC_nfA" target="_blank" style="background-color:#a6aada">
+                <img src="https://t3.ftcdn.net/jpg/03/00/38/90/360_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg" alt="How to use video thumbnail">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+
+
+
+    </div>
+
+
+                                                        <!-- change the link and name  below code 👇👇👇-->
+
+
+
+
+                                                        <div class="suggested-products">
+                                                            <h2 class="xyz">You Might Also Like</h2>
+                                                            <div class="product-grid">
+                                                                <a href="Dosa.html">
+                                                                    <div class="product-card" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+                                                                        <img src="https://m.media-amazon.com/images/I/61EoK7QfisL.SX679.jpg" alt="MTR Plain Dosa Mix">
+                                                                        <h3>MTR Plain Dosa Mix</h3>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="Bread.html">
+                                                                    <div class="product-card" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+                                                                        <img src="https://www.bigbasket.com/media/uploads/p/l/40092241_8-britannia-brown-bread-with-goodness-of-wheat-enriched-with-vitamins.jpg" alt="Britannia Brown Bread">
+                                                                        <h3>Britannia Brown Bread</h3>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="MTR.html">
+                                                                    <div class="product-card" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+                                                                        <img src="https://cdn.zeptonow.com/production///tr:w-1000,ar-1021-1021,pr-true,f-auto,q-80/cms/product_variant/c5d631a3-8003-4e06-87db-f4bcfccfbf73.jpeg" alt="Maggi Nutri-Licious Masala Veg Atta Noodles">
+                                                                        <h3>MTR 3 Minute Poha</h3>
+                                                                    </div>
+                                                                </a>
+                                                                <a href="Ketchup.html">
+                                                                    <div class="product-card" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+                                                                        <img src="https://m.media-amazon.com/images/I/61dHLDu2PoL.SX679.jpg" alt="Kissan Fresh Tomato Ketchup">
+                                                                        <h3>Maggi Nutri</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+        </div>
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                                        <!--Dont change the below code 👇👇👇-->
+
+    <footer>
+        <div class="footer-links">
+            <a class="bottom-link" href="#" onclick="alertPageComingSoon()">Help</a>
+            <a class="bottom-link" href="#" onclick="alertPageComingSoon()">Contact us</a>
+            <a class="bottom-link" href="#" onclick="alertPageComingSoon()">About us</a>
+            <a class="bottom-link" href="#" onclick="alertPageComingSoon()">Work with us</a>
+        </div>
+        <div class="footer-logo">
+            <p>Food360 ©2024</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
